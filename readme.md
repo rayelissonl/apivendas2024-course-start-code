@@ -45,31 +45,51 @@ PORT=3333
 API_URL=http://localhost:3333
 ```
 
+### Estrutura do Projeto
+
+O projeto está estruturado com as seguintes características:
+
+1. **Infraestrutura de Banco de Dados**:
+   - Utiliza TypeORM para gerenciamento do banco de dados
+   - Configuração de migrations para versionamento do banco
+   - Suporte a UUID para identificadores únicos
+
+2. **API Features**:
+   - Express.js como framework web
+   - Suporte a CORS habilitado
+   - Documentação Swagger em `/docs`
+   - Tratamento centralizado de erros
+   - Estrutura modular e organizada
+
+3. **Tabelas do Banco**:
+   - Tabela `products` com os campos:
+     - id (UUID, chave primária)
+     - name (varchar)
+     - price (decimal)
+     - quantity (int)
+     - created_at (timestamp)
+     - updated_at (timestamp)
+
 ### Executando o projeto em seu PC
 
-O projeto inicial contém apenas o arquivo `server.ts` com o um `console.log`. Executar o servidor e observar a mensagem `Olá Dev!` na console do shell:
+Para executar o projeto, siga os passos abaixo:
+
+1. Certifique-se que o banco de dados PostgreSQL está rodando
+2. Execute as migrations do banco de dados:
+```shell
+npm run typeorm migration:run
+```
+3. Inicie o servidor:
+```shell
+npm run dev
+```
+
+O servidor estará disponível em http://localhost:3333 com documentação Swagger em http://localhost:3333/docs
 
 ```shell
 npm run dev
 ```
 
-**Partiu curso!**
 
 
-## Redes Sociais
 
-[Site Conex Networks](https://conexnetworks.com.br)
-
-[Blog Aluizio Developer](https://aluiziodeveloper.com.br)
-
-[Perfil Udemy](https://www.udemy.com/user/jorge-aluizio-alves-de-souza/)
-
-[Cursos Gratuitos](https://letsgoahead.com.br/)
-
-[YouTube](https://www.youtube.com/jorgealuizio)
-
-[Instagram](https://www.instagram.com/conexnetworks.dev/)
-
-[Servidor no Discord](https://discord.gg/3J87BMz5fD)
-
-[LinkedIn](https://www.linkedin.com/in/jorgealuizio/)
