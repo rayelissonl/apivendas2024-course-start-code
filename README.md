@@ -1,6 +1,88 @@
 # API Vendas 2024
 
-Este projeto implementa uma API de vendas com uma arquitetura moderna e boas práticas de desenvolvimento.
+API REST desenvolvida com Node.js, Express, TypeScript, e TypeORM.
+
+## 🚀 Tecnologias
+
+- Node.js
+- TypeScript
+- Express
+- TypeORM
+- PostgreSQL
+- Jest (Testes)
+- Swagger (Documentação)
+- Docker
+
+## 📋 Pré-requisitos
+
+- Node.js (versão LTS)
+- Docker e Docker Compose
+- PostgreSQL
+
+## 🔧 Instalação
+
+1. Clone o repositório:
+```bash
+git clone [url-do-repositorio]
+```
+
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Configure as variáveis de ambiente:
+- Copie o arquivo `.env.example` para `.env`
+- Ajuste as variáveis conforme necessário
+
+4. Inicie os containers Docker:
+```bash
+docker-compose up -d
+```
+
+## 🏃‍♂️ Executando o projeto
+
+### Desenvolvimento
+```bash
+npm run dev
+```
+
+### Testes
+```bash
+npm test
+```
+
+### Lint
+```bash
+npm run lint
+```
+
+## 📚 Documentação da API
+
+A documentação da API está disponível através do Swagger UI em:
+```
+http://localhost:3000/api-docs
+```
+
+## 🛠️ Estrutura do Projeto
+
+```
+src/
+├── common/           # Código compartilhado e utilitários
+├── modules/          # Módulos da aplicação
+└── config/          # Configurações
+```
+
+## 🔄 Migrations
+
+Executar migrations:
+```bash
+npm run typeorm migration:run
+```
+
+## 📄 Licença
+
+ISC
 
 ## Estrutura do Projeto
 
